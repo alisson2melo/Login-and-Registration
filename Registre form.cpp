@@ -13,17 +13,17 @@ int main()
 {
 
     int i;
-    count<<"\t\t\t__________________________________________________________\n\n\n";
-    count<<"\t\t\t                        Welcome                           \n\n\n";
-    count<<"\t\t\t_______________________  MENU         ________________________\n\n";
-    count<<"                                                                     \n\n";
-    count<<"\t| Press 1 to LOGIN                    |"<<endl;
-    count<<"\t| Press 2 to REGISTER                 |"<<endl;
-    count<<"\t| Press 3 if you forgot your PASSWORD |"<<endl;
-    count<<"\t| Press 4 to EXIT                     |"<<endl;
-    count<<"\n\t\t\t Please enter your choice : ";
+    cout<<"\t\t\t__________________________________________________________\n\n\n";
+    cout<<"\t\t\t                        Welcome!!                           \n\n\n";
+    cout<<"\t\t\t_______________________    MENU         ________________________\n\n";
+    cout<<"                                                                     \n\n";
+    cout<<"\t| Press 1 to LOGIN                    |"<<endl;
+    cout<<"\t| Press 2 to REGISTER                 |"<<endl;
+    cout<<"\t| Press 3 if you forgot your PASSWORD |"<<endl;
+    cout<<"\t| Press 4 to EXIT                     |"<<endl;
+    cout<<"\n\t\t\t Please enter your choice : ";
     cin>>i;
-    count<<endl;
+    cout<<endl;
 
     switch(i)
     {
@@ -55,7 +55,7 @@ void login()
     string userId, password, id, pass;
     system("CLS");
     cout<<"\t\t\t Please enter the username and password : "<<endl;
-    count<<"\t\t\t USERNAME ";
+    cout<<"\t\t\t USERNAME ";
     cin>>userId;
     cout<<"\t\t\t PASSWORD ";
     cin>>password;
@@ -94,7 +94,7 @@ void registration(){
     cin>>rpassword;
 
     ofstream f1("records.txt", ios::app);
-    f1<<ruserId<<''<<rpassword<<endl;
+    f1<<ruserId<<rpassword<<endl;
     system("CLS");
     cout<<"\n\t\t\t Registration is successfull! \n";
     main();
@@ -115,7 +115,7 @@ void forgot(){
         case 1:{
 
             int count=0;
-            string suserId,sId,spass;
+            string suserId, sId, spass;
             cout<<"\n\t\t\t Enter the username which you remember :";
             cin>>suserId;
 
@@ -131,7 +131,7 @@ void forgot(){
             f2.close();
             if(count==1){
                 cout<<"\n\n Your account is found! \n";
-                cout<<"\n\n Your password is : "<<spass:
+                cout<<"\n\n Your password is :"<<spass <<endl;
                 main();
             }
             else{
