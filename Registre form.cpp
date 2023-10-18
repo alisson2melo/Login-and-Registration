@@ -24,7 +24,8 @@ int main()
     cout<<"\n\t\t\t Please enter your choice : ";
     cin>>i;
     cout<<endl;
-
+    
+    //The switch statement allows to execute a block of code among many alternatives
     switch(i)
     {
         case 1:
@@ -43,7 +44,7 @@ int main()
             cout<<"\t\t\t Thanky you \n\n";
             break;
         default:
-            system("CLS");
+            system("CLS"); //function to clear the window
             cout<<"\t\t\t Please select from the options give above\n"<<endl;
             main();
     }
@@ -60,7 +61,7 @@ void login()
     cout<<"\t\t\t PASSWORD ";
     cin>>password;
 
-    ifstream input("records.txt");
+    ifstream input("records.txt"); // Declare an ifstream object named "input"
 
     while(input>>id>>pass){
 
@@ -71,7 +72,7 @@ void login()
             }
     }
 
-    input.close();
+    input.close(); 
 
     if(count==1){
         cout<<userId<<"\n Your LOGIN is successfull\n Thanks ! \n";
@@ -93,7 +94,7 @@ void registration(){
     cout<<"\t\t\t Enter the password : ";
     cin>>rpassword;
 
-    ofstream f1("records.txt", ios::app);
+    ofstream f1("records.txt", ios::app); // Declare an ofstream object named "f1"
     f1<<ruserId<<rpassword<<endl;
     system("CLS");
     cout<<"\n\t\t\t Registration is successfull! \n";
