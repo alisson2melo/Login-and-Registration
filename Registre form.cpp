@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string.h>
 
-using namespace std;
+//using namespace std;
 
 //Menu Functions
 void login();
