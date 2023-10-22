@@ -2,13 +2,14 @@
 #include <fstream>
 #include <string.h>
 
-//using namespace std;
+//using namespace std; *Disabled for following good practices*
 
 //Menu Functions
 void login();
 void registration();
 void forgot();
 
+//Command-line menu interface
 int main()
 {
 
@@ -61,6 +62,7 @@ void login()
     cout<<"\t\t\t PASSWORD ";
     cin>>password;
 
+    //Function to read data from a file
     ifstream input("records.txt"); // Declare an ifstream object named "input"
 
     while(input>>id>>pass){
@@ -93,7 +95,8 @@ void registration(){
     cin>>ruserId;
     cout<<"\t\t\t Enter the password : ";
     cin>>rpassword;
-
+    
+    //Function to create the file and write the data
     ofstream f1("records.txt", ios::app); // Declare an ofstream object named "f1"
     f1<<ruserId<<rpassword<<endl;
     system("CLS");
